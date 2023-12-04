@@ -1,24 +1,9 @@
-//console.dir(document);
+var header= document.querySelector('#main-header');
+header.style.borderBottom='solid 5px black';
 
-var title=document.getElementById('main-header');
-    title.style.borderBottom='solid  5px black';
-    title.style.borderTop='solid  5px black';
-    title.style.borderLeft='solid  5px black';
-    title.style.fontWeight='bold';
-    title.style.color='yellow';
+var input=document.querySelector('#item2');
+input.style.backgroundColor='green';
 
+var input=document.querySelector('#item3');
+input.style.visibility='hidden';
 
-var tit=document.getElementsByClassName('tit');
-tit[0].style.fontWeight = 'bold';
-tit[0].style.color='yellow';
-tit[0].style.backgroundColor='green';
-
-
-
-var element= document.getElementsByTagName("li");
-element[2].style.backgroundColor='green';
-
-for(var i=0; i<element.length;i++){
-    element[i].style.fontWeight='bold';
-
-}
