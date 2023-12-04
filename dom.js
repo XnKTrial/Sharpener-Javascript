@@ -15,7 +15,7 @@ tit[0].style.backgroundColor='green';
 
 
 
-var element= document.getElementsByClassName("list-group-item");
+var element= document.getElementsByTagName("li");
 element[2].style.backgroundColor='green';
 
 for(var i=0; i<element.length;i++){
