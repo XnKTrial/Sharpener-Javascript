@@ -1,9 +1,11 @@
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
+var desc = document.getElementById('description');
 var filter = document.getElementById('filter');
 
 // Form submit event
 form.addEventListener('submit', addItem);
+form.addEventListener('submit', addDescription);
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
@@ -38,6 +40,35 @@ function addItem(e){
   // Append li to list
   itemList.appendChild(li);
 }
+
+function addDescription(e){
+    e.preventDefault();
+  
+    // Get input value
+    var newItem = document.getElementById('description').value;
+  
+    // Create new li element
+    var li = document.createElement('li');
+    // Add class
+    li.className = 'list-group-item';
+    // Add text node with input value
+    li.appendChild(document.createTextNode(newItem));
+  
+    // Create del button element
+    var deleteBtn = document.createElement('button');
+  
+    // Add classes to del button
+    deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  
+    // Append text node
+    deleteBtn.appendChild(document.createTextNode('X'));
+  
+    // Append button to li
+    li.appendChild(deleteBtn);
+  
+    // Append li to list
+    itemList.appendChild(li);
+  }
 
 // Remove item
 function removeItem(e){
