@@ -12,3 +12,13 @@ var tit=document.getElementsByClassName('tit');
 tit[0].style.fontWeight = 'bold';
 tit[0].style.color='yellow';
 tit[0].style.backgroundColor='green';
+
+
+
+var element= document.getElementsByClassName("list-group-item");
+element[2].style.backgroundColor='green';
+
+for(var i=0; i<element.length;i++){
+    element[i].style.fontWeight='bold';
+
+}
